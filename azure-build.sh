@@ -23,5 +23,5 @@ read -p 'Would you like to spin up a unix VM in the Reasource Group now? [y/n]' 
 read -p 'Enter the Image name you would like to use (Ask the site Admin for approved image names): ' img
 read -p 'Enter the hostname for your new VM:  ' hostname
 read -p 'Enter the admin user name for the local administrator: ' admin
-read -p 'Supply your password, for Windows VMs, or, paste your ssh key for Unix VMs: ' token
+read -p 'Paste your ssh key here: ' token
 az vm create --resource-group $rg_name --name $hostname --admin-username $admin --image $img --ssh-key-value "$token"
